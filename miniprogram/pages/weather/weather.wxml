@@ -1,0 +1,119 @@
+<!--weather.wxml-->
+<view class="container">
+  <view class="city" bindtap="bindViewTap">
+    <image class="dwicon" src='../../images/curcity.png'></image>
+    <text>{{city}}{{district}}</text>
+    <text class="update">{{time}}</text>
+    <image class="zbicon" src='../../images/update.png'></image>
+  </view>
+
+  <view class="weather">
+    <view class='nowCond clearfix'>
+      <view class='section'>
+      <image class="condImg" src='{{now.cond.src}}'> </image>
+      </view>
+      <view class="aside">
+        <text class="temperature">{{now.tmp}}℃</text>
+        <text>{{now.cond.txt}} | {{now.wind.dir}}{{now.wind.sc}}级</text>
+      </view>
+    </view>
+    
+    <view class="other">
+      <view class='border_r'><text class="title">体感温度(℃)</text><text class="info">{{now.fl}}</text></view>
+      <view class='border_r'><text class="title">相对湿度(%)</text><text class="info">{{now.hum}}</text></view>
+      <view ><text class="title">降水量(mm)</text><text class="info">{{now.pcpn}}</text></view>
+      <view class='border_r'><text class="title">能见度(km)</text><text class="info">{{now.vis}}</text></view>
+      <view class='border_r'><text class="title">气压(mb)</text><text class="info">{{now.pres}}</text></view>
+      <view ><text class="title">风向</text><text class="info">{{now.wind.dir}}</text></view>
+      <view class='border_r'><text class="title">风力(级)</text><text class="info">{{now.wind.sc}}</text></view>
+      <view class='border_r'><text class="title">风速(公里/小时)</text><text class="info">{{now.wind.spd}}</text></view>
+      <view ><text class="title">风向角度(deg)</text><text class="info">{{now.wind.deg}}</text></view>
+    </view>
+  </view>
+
+  <view class="forecast">
+    <text class="title">3天天气预报</text>
+    <view class='fore_box'>
+      <view wx:for="{{forecast}}" class="fore_daily" wx:key="{{index}}">
+        <view class="fore_day">{{item.date}}</view>
+        <view class="fore_tem"><text>{{item.tmp_min}}~{{item.tmp_max}}℃</text></view>
+        <view class='fore_cond'>{{item.cond_txt_d}}</view>
+        <view class='fore_wind'>{{item.wind_dir}}{{item.wind_sc}}级</view>
+      </view>
+    </view>
+  </view>
+
+  <view class="suggestion">
+    <text class="title">生活指数</text>
+    <view class="list">
+        <view class="list_l">
+          <image src="../../images/icon/comf.png"></image>
+          <text>舒适度指数</text>
+        </view>
+        <view class="list_r">
+          <text class="list_t">{{suggestion.comf.brf}}</text>
+          <text>{{suggestion.comf.txt}}</text>
+        </view>
+      </view>
+      <view class="list">
+        <view class="list_l">
+          <image src="../../images/icon/cw.png"></image>
+          <text>洗车指数</text>
+        </view>
+        <view class="list_r">
+          <text class="list_t">{{suggestion.cw.brf}}</text>
+          <text>{{suggestion.cw.txt}}</text>
+        </view>
+      </view>
+      <view class="list">
+        <view class="list_l">
+          <image src="../../images/icon/drsg.png"></image>
+          <text>穿衣指数</text>
+        </view>
+        <view class="list_r">
+          <text class="list_t">{{suggestion.drsg.brf}}</text>
+          <text>{{suggestion.drsg.txt}}</text>
+        </view>
+      </view>
+      <view class="list">
+        <view class="list_l">
+          <image src="../../images/icon/flu.png"></image>
+          <text>感冒指数</text>
+        </view>
+        <view class="list_r">
+          <text class="list_t">{{suggestion.flu.brf}}</text>
+          <text>{{suggestion.flu.txt}}</text>
+        </view>
+      </view>
+      <view class="list">
+        <view class="list_l">
+          <image src="../../images/icon/sport.png"></image>
+          <text>运动指数</text>
+        </view>
+        <view class="list_r">
+          <text class="list_t">{{suggestion.sport.brf}}</text>
+          <text>{{suggestion.sport.txt}}</text>
+        </view>
+      </view>
+      <view class="list">
+        <view class="list_l">
+          <image src="../../images/icon/trav.png"></image>
+          <text>旅游指数</text>
+        </view>
+        <view class="list_r">
+          <text class="list_t">{{suggestion.trav.brf}}</text>
+          <text>{{suggestion.trav.txt}}</text>
+        </view>
+      </view>
+      <view class="list">
+        <view class="list_l">
+          <image src="../../images/icon/uv.png"></image>
+          <text>紫外线指数</text>
+        </view>
+        <view class="list_r">
+          <text class="list_t">{{suggestion.uv.brf}}</text>
+          <text>{{suggestion.uv.txt}}</text>
+        </view>
+      </view>
+  </view>
+</view>

@@ -1,0 +1,21 @@
+<!--index.wxml-->
+<view class="container">
+<view class='profile'>
+  <view class="profile-img">
+    <open-data type="userAvatarUrl"></open-data>
+  </view>
+  <open-data type="userNickName" class="profile-name"></open-data>
+</view>
+  <view class="about">
+  <text>产品名称：天气预报</text>
+  <text>版本号：{{v}}</text>
+  <text>数据来源：和风天气</text>
+  <text>开发时间：2019年7月</text>
+  </view>
+  <view class="about aboutme">
+    <text class="title">作者：付彩梅</text>
+    <text>电话：18815282822</text>
+    <text class="title">邮箱：547169149@qq.com</text>
+    <text >GitHub：github.com/lemonfcm</text>
+  </view>
+</view>

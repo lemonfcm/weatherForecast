@@ -1,0 +1,41 @@
+/**weather.wxss**/
+.container{background: #ddd;}
+/*城市信息*/
+.city {padding: 3% 5%;  overflow: hidden;}
+.city .dwicon{ width: 30rpx; height: 30rpx; float: left; margin: 5px;}
+.city text{font-size: 16px; color: #666; float: left;}
+.city .zbicon{ width: 30rpx; height: 30rpx; float: right;margin: 5px;}
+.city .update{ font-size: 16px; float: right; width: 110px;}
+
+/*天气预报*/
+.weather{overflow: hidden;background: #cef;color: #58b; padding: 5%; }
+.weather .nowCond{margin-bottom: 50rpx;}
+.weather .section{ float: left; width:50%;display: block;  margin-top: 5%;}
+.weather .section .condImg{width: 120rpx; height: 120rpx;margin-left: 25%;}
+.weather .aside{ float: right; width:40%; margin-top: 5%; font-size: 12px; }
+.weather .aside .temperature{ font-size: 36px; display: block;}
+.weather .other{ clear:both; margin-top: 20rpx; display: block;width: 100%;border:1px solid #bbd; border-bottom: none;}
+.weather .other view{display: inline-block; text-align: center; padding: 10rpx 0;width: 33.33%;box-sizing: border-box;
+ border-bottom: 1px solid #bbd;}
+.weather .other view.border_r{border-right:1px solid #bbd; }                     
+.weather .other .title{font-size: 12px; color: ; }
+.weather .other .info{ display: block; padding-top: 5%; }
+
+/*3天的天气预报*/
+.forecast{margin-top: 5%;}
+.forecast .title{ display: block; padding: 3% 5%; background: #58b; color: #fff;}
+.forecast .fore_box{overflow: hidden;background: #cef;color: #58b; padding: 5%;display: flex;}
+.forecast .fore_daily{text-align: center;flex:1;}
+.forecast .fore_daily .fore_day{font-size: 12px;}
+.forecast .fore_daily .fore_tem{font-size: 16px;}
+.forecast .fore_daily .fore_cond{font-size: 16px;}
+.forecast .fore_daily .fore_wind{font-size: 12px;}
+
+/*生活指数*/
+.suggestion{ margin-top: 5%;}
+.suggestion .title{ display: block; padding: 3% 5%; background: #58b; color: #fff;}
+.suggestion .list{ display: flex; font-size: 12px; margin-top: 1px; }
+.suggestion .list_l{ flex: 1; text-align: center; background: #cef; color: #bbd; padding: 8px;}
+.suggestion .list_l image{ width:30px; height: 30px; display: block; margin: 0 auto;}
+.suggestion .list_r{ flex: 4; background: #eee; padding: 8px; color: #aaa;}
+.suggestion .list_t{ font-size: 14px; display: block; margin-bottom: 5px; color: #333;}
